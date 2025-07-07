@@ -28,7 +28,8 @@ body {
     }
 
     .timer {
-      background-color: orange;
+      background-color: #00b386;
+      color: white;
       padding: 5px 10px;
       border-radius: 5px;
       font-weight: bold;
@@ -37,7 +38,8 @@ body {
     }
 
     .startBtn {
-      background-color: #66c2ff;
+      background-color: #cc5200;
+      color: white;
       padding: 5px 10px;
       border-radius: 5px;
       font-weight: bold;
@@ -47,15 +49,15 @@ body {
     }
 
     .question {
-      font-size: 16px;
+      font-size: 17px;
       font-weight: bold;
       margin: 10px 0;
     }
 
     .options .option {
-      font-size: 14px;
+      font-size: 15px;
       padding: 6px;
-      margin: 3px 0;
+      margin: 4px 0;
       border: 1px solid #ddd;
       border-radius: 5px;
       background-color: #f9f9f9;
@@ -64,16 +66,16 @@ body {
     }
 
     .option.selected {
-      background-color: #cce5ff !important;
+      background-color: #80bdff !important;
     }
 
     .option.correct {
-      background-color: #00cc99;
+      background-color: #009999;
       color: white;
     }
 
     .option.wrong {
-      background-color: #ff4d4d;
+      background-color: #990000;
       color: white;
     }
 
@@ -87,7 +89,7 @@ body {
 
     .btn {
       padding: 10px 16px;
-      font-size: 14px;
+      font-size: 15px;
       border-radius: 5px;
       border: none;
       cursor: pointer;
@@ -95,7 +97,7 @@ body {
     }
 
     .btn-primary {
-  background-color: #cc5200;
+  background-color: #000080;
   color: white;
   font-weight: bold;
   display: block;
@@ -136,7 +138,7 @@ body {
       text-align: center;
       font-size: 16px;
       font-weight: bold;
-      color: #007bff;
+      color: #0056b3;
       margin-top: 10px;
     }
 
@@ -147,14 +149,14 @@ body {
       margin-bottom: 30px;
       margin-top: 30px;
       border-radius: 5px;
-      font-size: 14px;
+      font-size: 15px;
     }
 
     .analysis-box .option {
       margin: 2px 0;
       border: 1px solid #ddd;
       border-radius: 5px;
-      font-size: 14px;
+      font-size: 15px;
       padding: 3px; 
        
     }
@@ -169,12 +171,12 @@ body {
     }
 
     .correct-feedback {
-      background-color: #009900;
+      background-color: #009999;
       color: white;
     }
 
     .wrong-feedback {
-      background-color: #ff0000;
+      background-color: #990000;
       color: white;
     }
 
