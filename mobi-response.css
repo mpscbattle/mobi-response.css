@@ -69,23 +69,25 @@ body {
   cursor: pointer;
 }
 
-/* Container for question number to align it */
 .question-number-container {
-    margin-bottom: 10px; /* Space below question number */
-    text-align: left; /* Aligns the number to the left, below timer */
+    margin-bottom: 10px;
+    text-align: left;
 }
+
+/* Updated: Ensure 100% perfect circle for question number */
 .question-number {
   font-weight: bold;
-  font-size: 13px;
+  font-size: 12px;
   color: white;
-  background-color: #cc5200; 
-  display: inline-block;
-  padding: 5px 10px; /* Increased padding for better circular shape */
+background-color: #cc5200;
+  display: flex; /* Changed to flexbox for perfect centering */
+  align-items: center; /* Vertically center text */
+  justify-content: center; /* Horizontally center text */
+  width: 35px; /* Set a fixed width */
+  height: 35px; /* Set a fixed height, equal to width for perfect circle */
   border-radius: 50%; /* Make it circular */
-  min-width: 25px; /* Ensure minimum width for single/double digits */
-  text-align: center; /* Center text inside the circle */
-  line-height: 25px; /* Adjust line-height for vertical centering if padding is small */
-  box-sizing: border-box; /* Include padding in the element's total width and height */
+  box-sizing: border-box; /* Include padding/border in total width/height */
+  flex-shrink: 0; /* Prevent it from shrinking */
 }
 
 .question {
