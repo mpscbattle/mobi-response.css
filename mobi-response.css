@@ -5,194 +5,238 @@
 }
 
 body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f0f0f0;
-      margin: 0;
-      padding: 5px;
-    }
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 5px;
+}
 
-    .quiz-box, .report-card, .analysis-card {
-      max-width: 600px;
-      margin: 20px auto;
-      background: #ffffff;
-      padding: 12px;
-      border-radius: 5px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+.quiz-box, .report-card, .analysis-card {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
-    .quiz-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+.quiz-header {
+  display: flex;
+  justify-content: space-between; /* Pushes timer left, onlineTestBtn right */
+  align-items: center;
+  margin-bottom: 10px; /* Space below header */
+}
 
-    .timer {
-      background-color: #00b386;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 14px;
-      margin: 10px 0;
-    }
+.timer {
+  background-color: #00b386; /* Green background */
+  color: white;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 13px;
+  /* margin-top: 10px; /* Removed margin as flexbox handles alignment */
+  /* margin-bottom: 10px; */
+}
 
-    .startBtn {
-      background-color: #cc5200;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 14px;
-      cursor: pointer;
-      margin: 10px 0;
-    }
+/* Online Test Series button - now always visible on top right */
+.onlineTestBtn {
+  background-color: orange; /* Orange background */
+  color: white; /* White text */
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 13px;
+  border: none; /* No border */
+  cursor: pointer;
+  /* margin-top: 10px; /* Removed margin as flexbox handles alignment */
+  /* margin-bottom: 10px; */
+}
+.start-test-button-container {
+  display: flex;
+  justify-content: center; /* Center the button */
+  margin-top: 20px; /* Space above navigation buttons */
+  margin-bottom: 10px;
+}
 
-    .question {
-      font-size: 17px;
-      font-weight: bold;
-      margin: 10px 0;
-    }
+.startBtn {
+  background-color: #660033;
+  color: white;
+  padding: 3px 6px; /* Larger padding for a prominent button */
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px; /* Slightly larger font */
+  border: none; /* No border */
+  cursor: pointer;
+}
 
-    .options .option {
-      font-size: 15px;
-      padding: 6px;
-      margin: 7px 0;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      background-color: #f9f9f9;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
+/* Container for question number to align it */
+.question-number-container {
+    margin-bottom: 10px; /* Space below question number */
+    text-align: left; /* Aligns the number to the left, below timer */
+}
+.question-number {
+  font-weight: bold;
+  font-size: 13px;
+  color: white;
+  background-color: #cc5200; 
+  display: inline-block;
+  padding: 5px 10px; /* Increased padding for better circular shape */
+  border-radius: 50%; /* Make it circular */
+  min-width: 25px; /* Ensure minimum width for single/double digits */
+  text-align: center; /* Center text inside the circle */
+  line-height: 25px; /* Adjust line-height for vertical centering if padding is small */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
 
-    .option.selected {
-      background-color: #80bdff !important;
-    }
+.question {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 10px 0;
+}
 
-    .option.correct {
-      background-color: #009999;
-      color: white;
-    }
+.options .option {
+  font-size: 15px;
+  padding: 6px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
-    .option.wrong {
-      background-color: #990000;
-      color: white;
-    }
+.option.selected {
+  background-color: #80bdff !important;
+}
 
-    .navigation {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 15px;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+.option.correct {
+  background-color: #009999;
+  color: white;
+}
 
-    .btn {
-      padding: 10px 16px;
-      font-size: 15px;
-      border-radius: 5px;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-    }
+.option.wrong {
+  background-color: #990000;
+  color: white;
+}
 
-    .btn-primary {
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 16px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-primary {
   background-color: #000080;
   color: white;
   font-weight: bold;
   display: block;
   margin: 15px auto;
-  padding: 10px 20px;
+  padding: 5px 8px;
   border-radius: 5px;
 }
 
-    .btn-secondary {
-      background-color: #6c757d;
-      color: white;
-    }
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
 
-    .btn-black {
-      background-color: black;
-      color: white;
-      display: block;
-      margin: 10px auto;
-    }
+.btn-black {
+   font-weight: bold;
+  background-color: black;
+  color: white;
+  display: block;
+  margin: 10px auto 0;
+  margin-bottom: 15px;
+  padding: 3px 7px;
+}
 
-    .report-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 10px;
-    }
+.report-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
 
-    .report-item {
-      background-color: #f2f2f2;
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: center;
-      font-size: 15px;
-      border-radius: 5px;
-    }
+.report-item {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+}
 
-    .result-message {
-      text-align: center;
-      font-size: 16px;
-      font-weight: bold;
-      color: #0056b3;
-      margin-top: 10px;
-    }
+.result-message {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0056b3;
+  margin-top: 10px;
+}
 
-    .analysis-box {
-      background-color: #f9f9f9;
-      border: 1px solid #ddd;
-      padding: 5px;
-      margin-bottom: 30px;
-      margin-top: 30px;
-      border-radius: 5px;
-      font-size: 15px;
-    }
+.analysis-box {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 5px;
+  font-size: 15px;
+}
 
-    .analysis-box .option {
-      margin: 6px 0;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-size: 15px;
-      padding: 6px; 
-       
-    }
+.analysis-box .option {
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 3px;
+}
 
-    .feedback {
-      font-weight: bold;
-      margin-top: 10px;
-      padding: 8px;
-      border-radius: 5px;
-      text-align: center;
-      font-size: 16px;
-    }
+.feedback {
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+}
 
-    .correct-feedback {
-      background-color: #009999;
-      color: white;
-    }
+.correct-feedback {
+  background-color: #009999;
+  color: white;
+}
 
-    .wrong-feedback {
-      background-color: #990000;
-      color: white;
-    }
+.wrong-feedback {
+  background-color: #990000;
+  color: white;
+}
 
-    .not-attempted-feedback {
-      background-color: #66c2ff;
-      color: white;
-    }
+.not-attempted-feedback {
+  background-color: #66c2ff;
+  color: white;
+}
 
-    @media screen and (max-width: 600px) {
-      .quiz-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+/* Responsive adjustment for small screens */
+@media screen and (max-width: 600px) {
+  .quiz-header {
+    flex-direction: row; /* Keep row for timer/onlineTestBtn */
+    justify-content: space-between; /* Keep justified */
+    align-items: flex-start; /* Align items to start */
+  }
 
-      .navigation {
-        flex-direction: column;
-        align-items: stretch;
-      }
+  .navigation {
+    flex-direction: column; /* Stack prev/next buttons vertically */
+    align-items: stretch; /* Make them full width */
+  }
 }
