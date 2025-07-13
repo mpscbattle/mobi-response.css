@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-/* Poppins को इम्पोर्ट किया गया है, यदि आप Noto Serif Devanagari चाहते हैं, तो उसे भी यहां इम्पोर्ट करें और font-family में प्राथमिकता दें */
 
 * {
-  font-family: 'Poppins', sans-serif !important; /* Poppins को प्राथमिक रखा गया है */
+  font-family: 'Poppins', sans-serif !important;
 }
 
 body {
@@ -18,72 +17,74 @@ body {
   background: #ffffff;
   padding: 12px;
   border-radius: 5px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
+ box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
 }
 
 .quiz-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Pushes timer left, onlineTestBtn right */
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Space below header */
 }
 
 .timer {
-  background-color: #00b386;
+  background-color: #00b386; /* Green background */
   color: white;
   padding: 3px 6px;
   border-radius: 5px;
   font-weight: bold;
   font-size: 13px;
+  /* margin-top: 10px; /* Removed margin as flexbox handles alignment */
+  /* margin-bottom: 10px; */
 }
 
+/* Online Test Series button - now always visible on top right */
 .onlineTestBtn {
-  background-color: orange;
-  color: white;
+  background-color: orange; /* Orange background */
+  color: white; /* White text */
   padding: 3px 6px;
   border-radius: 5px;
   font-weight: bold;
   font-size: 13px;
-  border: none;
+  border: none; /* No border */
   cursor: pointer;
+  /* margin-top: 10px; /* Removed margin as flexbox handles alignment */
+  /* margin-bottom: 10px; */
 }
-
 .start-test-button-container {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  justify-content: center; /* Center the button */
+  margin-top: 20px; /* Space above navigation buttons */
   margin-bottom: 10px;
 }
 
 .startBtn {
   background-color: #660033;
   color: white;
-  padding: 3px 6px;
+  padding: 3px 6px; /* Larger padding for a prominent button */
   border-radius: 5px;
   font-weight: bold;
-  font-size: 15px;
-  border: none;
+  font-size: 15px; /* Slightly larger font */
+  border: none; /* No border */
   cursor: pointer;
 }
 
 .question-number-container {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-align: left;
 }
-
-.question-number {
   font-weight: bold;
-  font-size: 12px;
+  font-size: 11px;
   color: white;
-  background-color: #cc5200;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  box-sizing: border-box;
-  flex-shrink: 0;
+background-color: #cc5200;
+  display: flex; /* Changed to flexbox for perfect centering */
+  align-items: center; /* Vertically center text */
+  justify-content: center; /* Horizontally center text */
+  width: 35px; /* Set a fixed width */
+  height: 35px; /* Set a fixed height, equal to width for perfect circle */
+  border-radius: 50%; /* Make it circular */
+  box-sizing: border-box; /* Include padding/border in total width/height */
+  flex-shrink: 0; /* Prevent it from shrinking */
 }
 
 .question {
@@ -104,16 +105,16 @@ body {
 }
 
 .option.selected {
-  background-color: #80bdff !important;
+  background-color: #ffdd99 !important;
 }
 
 .option.correct {
-  background-color: #009999;
+  background-color: #29a329;
   color: white;
 }
 
 .option.wrong {
-  background-color: #990000;
+  background-color: #ff3333;
   color: white;
 }
 
@@ -150,7 +151,7 @@ body {
 }
 
 .btn-black {
-    font-weight: bold;
+   font-weight: bold;
   background-color: black;
   color: white;
   display: block;
@@ -183,28 +184,17 @@ body {
   margin-top: 10px;
 }
 
-/* NEW: Each analysis question will be in its own box */
-.analysis-question-box {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    margin-bottom: 20px; /* Space between analysis boxes */
-}
-
-/* Existing .analysis-box might be redundant if using .analysis-question-box */
-/* If .analysis-box is still used as an outer wrapper, adjust its padding if needed */
-.analysis-box { /* This might be the outer div for analysisContent */
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 5px; /* Keep outer padding minimal if inner boxes have their own */
+.analysis-box {
+  background-color: #f2f2f2;
+  border: 1px solid #d9d9d9;
+  padding: 5px;
   margin-bottom: 30px;
   margin-top: 30px;
   border-radius: 5px;
   font-size: 15px;
 }
 
-.analysis-box .option { /* This targets options within the old analysis-box, will still apply to new structure */
+.analysis-box .option {
   margin: 10px 0;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -222,137 +212,30 @@ body {
 }
 
 .correct-feedback {
-  background-color: #009999;
+  background-color: #29a329;
   color: white;
 }
 
 .wrong-feedback {
-  background-color: #990000;
+  background-color: #ff3333;
   color: white;
 }
 
 .not-attempted-feedback {
-  background-color: #66c2ff;
+  background-color: #595959;
   color: white;
-}
-
-/* NEW: Footer Stats Container */
-.quiz-footer-stats {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #f2f2f2;
-    padding: 8px 5px;
-    margin-top: 15px;
-    border-radius: 5px;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-    width: 100%;
-    z-index: 1000;
-}
-
-.stat-item {
-    background-color: #000080;
-    color: white;
-    padding: 6px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 12px;
-    flex-grow: 1;
-    margin: 0 3px;
-    white-space: nowrap;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-.stat-item span {
-    font-weight: normal;
-    margin-left: 5px;
-    color: #ffd700;
 }
 
 /* Responsive adjustment for small screens */
 @media screen and (max-width: 600px) {
   .quiz-header {
-    flex-direction: row; 
-    justify-content: space-between;
-    align-items: flex-start; 
+    flex-direction: row; /* Keep row for timer/onlineTestBtn */
+    justify-content: space-between; /* Keep justified */
+    align-items: flex-start; /* Align items to start */
   }
 
   .navigation {
-    flex-direction: column; 
-    align-items: stretch; 
+    flex-direction: column; /* Stack prev/next buttons vertically */
+    align-items: stretch; /* Make them full width */
   }
-
-    body {
-        padding: 0; 
-    }
-    .quiz-box {
-        margin: 5px auto; 
-        padding: 8px; 
-    }
-    .quiz-header {
-        margin-bottom: 5px; 
-    }
-
-    .timer, .startBtn, .onlineTestBtn {
-        font-size: 12px;
-        padding: 2px 4px;
-        margin-top: 8px; 
-        margin-bottom: 8px; 
-    }
-    
-    .question {
-        font-size: 16px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-    .options .option {
-        font-size: 14px;
-        padding: 6px;
-        margin: 8px 0;
-    }
-    .navigation .btn {
-        padding: 6px 12px;
-        font-size: 14px;
-    }
-    .btn-primary, .btn-black {
-        padding: 4px 7px;
-        font-size: 13px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    /* Footer stats buttons for small screens */
-    .quiz-footer-stats {
-        padding: 5px 2px; 
-        margin-top: 10px; 
-    }
-    .stat-item {
-        padding: 4px 6px; 
-        font-size: 10px; 
-        margin: 0 1px; 
-    }
-    .stat-item span {
-        margin-left: 3px;
-    }
-
-    .report-item {
-        font-size: 13px;
-        padding: 8px;
-    }
-    .result-message {
-        font-size: 15px;
-    }
-    .analysis-box {
-        padding: 5px;
-        font-size: 14px;
-    }
-    .analysis-box .option {
-        padding: 6px;
-        margin: 8px 0;
-    }
-    .feedback {
-        font-size: 12px;
-        padding: 3px;
-    }
-}
+  }
