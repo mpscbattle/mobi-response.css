@@ -73,6 +73,8 @@ body {
     margin-bottom: 15px;
     text-align: left;
 }
+/* Updated: Ensure 100% perfect circle for question number */
+.question-number {
   font-weight: bold;
   font-size: 11px;
   color: white;
@@ -185,7 +187,7 @@ background-color: #cc5200;
 }
 
 .analysis-box {
-  background-color: #f2f2f2;
+  background-color: #fff;
   border: 1px solid #d9d9d9;
   padding: 5px;
   margin-bottom: 30px;
@@ -196,7 +198,8 @@ background-color: #cc5200;
 
 .analysis-box .option {
   margin: 10px 0;
-  border: 1px solid #ddd;
+  background-color: #f2f2f2;
+  border: 1px solid #d9d9d9;
   border-radius: 5px;
   font-size: 15px;
   padding: 3px;
@@ -224,6 +227,7 @@ background-color: #cc5200;
 .not-attempted-feedback {
   background-color: #595959;
   color: white;
+  border-radius: 0px;
 }
 
 /* Responsive adjustment for small screens */
