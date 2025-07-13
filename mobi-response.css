@@ -78,7 +78,7 @@ body {
   font-weight: bold;
   font-size: 10px;
   color: white;
-background-color: #ffff00;
+background-color: #e65c00;
   display: flex; /* Changed to flexbox for perfect centering */
   align-items: center; /* Vertically center text */
   justify-content: center; /* Horizontally center text */
@@ -111,12 +111,12 @@ background-color: #ffff00;
 }
 
 .option.correct {
-  background-color: #009999;
+  background-color: #339966;
   color: white;
 }
 
 .option.wrong {
-  background-color: #990000;
+  background-color: #cc3300;
   color: white;
 }
 
@@ -198,7 +198,6 @@ background-color: #ffff00;
 
 .analysis-box .option {
   margin: 10px 0;
-  background-color: #f2f2f2;
   border: 1px solid #d9d9d9;
   border-radius: 5px;
   font-size: 15px;
