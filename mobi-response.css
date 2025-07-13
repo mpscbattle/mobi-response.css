@@ -76,14 +76,14 @@ body {
 /* Updated: Ensure 100% perfect circle for question number */
 .question-number {
   font-weight: bold;
-  font-size: 11px;
+  font-size: 10px;
   color: white;
-background-color: #cc5200;
+background-color: #ffff00;
   display: flex; /* Changed to flexbox for perfect centering */
   align-items: center; /* Vertically center text */
   justify-content: center; /* Horizontally center text */
-  width: 35px; /* Set a fixed width */
-  height: 35px; /* Set a fixed height, equal to width for perfect circle */
+  width: 32px; /* Set a fixed width */
+  height: 32px; /* Set a fixed height, equal to width for perfect circle */
   border-radius: 50%; /* Make it circular */
   box-sizing: border-box; /* Include padding/border in total width/height */
   flex-shrink: 0; /* Prevent it from shrinking */
@@ -107,16 +107,16 @@ background-color: #cc5200;
 }
 
 .option.selected {
-  background-color: #ffdd99 !important;
+  background-color: #80bdff !important;
 }
 
 .option.correct {
-  background-color: #339966;
+  background-color: #009999;
   color: white;
 }
 
 .option.wrong {
-  background-color: #cc3300;
+  background-color: #990000;
   color: white;
 }
 
