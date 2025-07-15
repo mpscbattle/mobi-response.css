@@ -87,6 +87,8 @@ background-color: #e65c00;
   border-radius: 50%; /* Make it circular */
   box-sizing: border-box; /* Include padding/border in total width/height */
   flex-shrink: 0; /* Prevent it from shrinking */
+  margin-bottom: 13px;
+  margin-top: 12px;
 }
 
 .question {
@@ -193,7 +195,7 @@ background-color: #e65c00;
   margin-bottom: 30px;
   margin-top: 30px;
   border-radius: 5px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .analysis-box .option {
