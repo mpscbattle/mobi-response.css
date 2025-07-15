@@ -107,16 +107,16 @@ background-color: #e65c00;
 }
 
 .option.selected {
-  background-color: #80bdff !important;
+  background-color: #ffcc66!important;
 }
 
 .option.correct {
-  background-color: #339966;
+  background-color: #00cc66;
   color: white;
 }
 
 .option.wrong {
-  background-color: #cc3300;
+  background-color: #ff3333;
   color: white;
 }
 
@@ -207,6 +207,7 @@ background-color: #e65c00;
 .feedback {
   font-weight: bold;
   margin-top: 10px;
+  margin-bottom: 10px;
   padding: 3px;
   border-radius: 0px;
   text-align: center;
@@ -214,7 +215,7 @@ background-color: #e65c00;
 }
 
 .correct-feedback {
-  background-color: #00e6ac;
+  background-color: #00e673;
   color: white;
   border-radius: 0px;
 }
@@ -226,7 +227,7 @@ background-color: #e65c00;
 }
 
 .not-attempted-feedback {
-  background-color: #66a3ff;
+  background-color: #7979d2;
   color: white;
   border-radius: 0px;
 }
